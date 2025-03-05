@@ -17,9 +17,13 @@ $ ./build.sh
 ```
 
 ## TODO 
+### phase 01: Setup environment
 - [ x ] setup GLFW 
 - [ x ] install glad
 - [ x ] setup OpenGL
 - [ x ] setup CMake 
 - [ x ] testing/hello_world.cpp - draw a triangle using OpenGL
+## Phase 02: Implement the core class
+- [ ] create a window class
+- [ ] create a object class 
 
