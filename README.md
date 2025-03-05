@@ -24,6 +24,7 @@ $ ./build.sh
 - [ x ] setup CMake 
 - [ x ] testing/hello_world.cpp - draw a triangle using OpenGL
 ## Phase 02: Implement the core class
-- [ ] create a window class
+- [ x ] create a window class
+- [ ] create a frame class which is a rectangle (x, y, width, height)
 - [ ] create a object class 
 

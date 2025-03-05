@@ -10,6 +10,7 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 # set source 
 set(SRC_HELLO_WORLD src/testing/hello_world.cpp)
+set(SRC_WINDOW_CLASS src/testing/window_class.cpp src/core/window.cpp)
 set(SRC_GLAD src/glad.c)
 
 # set include  
@@ -24,15 +25,16 @@ find_package(OpenGL REQUIRED)
 # Include GLFW
 find_package(glfw3 REQUIRED)
 
+# Include directories
+include_directories(${INCLUDE_DIR})
+
 # Add executable
 if (CMAKE_BUILD_TYPE STREQUAL "hello_world")
     add_executable(${PROJECT_NAME} ${SRC_HELLO_WORLD} ${SRC_GLAD})
-else()
-    add_executable(${PROJECT_NAME} ${SRC_HELLO_WORLD} ${SRC_GLAD})
+elseif(CMAKE_BUILD_TYPE STREQUAL "window_class")
+    add_executable(${PROJECT_NAME} ${SRC_WINDOW_CLASS} ${SRC_GLAD})
 endif()
 
-# Include directories
-target_include_directories(${PROJECT_NAME} PRIVATE ${INCLUDE_DIR})
 
 # Link OpenGL and GLFW
 target_link_libraries(${PROJECT_NAME} OpenGL::GL glfw)

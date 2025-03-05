@@ -1,4 +1,1 @@
-cmake -B build -S . -DCMAKE_BUILD_TYPE=hello_world
-cd build 
-make
-./Sea
+cmake -B build -S . -DCMAKE_BUILD_TYPE=window_class && cd build && make && ./Sea
